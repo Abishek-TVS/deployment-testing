@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block body_block %}
+
+<div class='jumbotron'>
+    <h2 style="padding-bottom: 20px;">Login Here</h2>
+    <form class="form-group" method="POST">
+        {% csrf_token %}
+        <label for="uname">Username</label>
+        <input  type="text" name="username" id="uname" placeholder="enter username">
+        <label for="pwd">password</label>
+        <input  type="password" name="password" id="pwd">
+        <input type="submit" value="Login">
+    </form>
+</div>
+
+{% endblock %}
